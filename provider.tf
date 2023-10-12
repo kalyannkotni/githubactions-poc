@@ -8,7 +8,13 @@ terraform {
 
     }
   }
+  backend "s3" {
+    bucket = "s3-terraform-statefile-as5"
+    key = "terraform.tfstate"
+    region = "ap-south-1"
+  }
 }
+
 # Provider Block
 provider "aws" {
   region = "ap-south-1"
