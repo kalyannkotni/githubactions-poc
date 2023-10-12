@@ -36,5 +36,5 @@ jobs:
       - name: Store terraform state
         run: |
           terraform state pull > terraform.tfstate
-          aws s3 cp terraform.tfstate s3://s3-terraform-statefile-as5/
+          aws s3 cp terraform.tfstate s3://s3-terraform-statefile-as5/terraform.tfstate
 
